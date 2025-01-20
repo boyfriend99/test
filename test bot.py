@@ -25,6 +25,8 @@ async def message_hendler(message:types.Message):
         await ask_age(message)
     elif 'age' not in user_data[user_id]:
         await total_message(message)
+     elif 'age' not in user_data[user_id]:
+        await total_git(message)
 
 async def welcome (message: types.Message):
     user_id = message.from_user.id
