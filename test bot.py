@@ -54,4 +54,8 @@ async def ask_age(message:types.Message):
         phone = message.text
     user_data[user_id]['phone'] = phone
     await message.answer(f'Пожалуйста введите возраст: ')
+    button = [
+        [types.KeyboardButton(text='Поделиться контактом', request_contact=True)]
+    ]
+    keyboard = types.ReplyKeyboardMarkup(keyboard=button, resize_keyboard=True)
     print(user_data)
